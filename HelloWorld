@@ -1,0 +1,13 @@
+#include <iostream>
+
+using std::cout;
+
+int main ()
+{
+
+//To print the message:
+cout << "Hello World, My name is Eduardo and it is my first project on cpp!";
+
+//To terminate the program:
+return 0;
+}
