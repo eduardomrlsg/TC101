@@ -1,0 +1,34 @@
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+//Declaring variables:
+int x=68, a=0, n=0;
+
+//Process:
+cout<<"In this program you have to guess the mystery number between 1-100";
+
+do{
+  n=n+1;
+  cout<<"\nChoose a number please _";
+  cin>>a;
+  if(a<x)
+  {
+    cout << "\nThe number " << a << " is too low.";
+  }
+  if(a>x)
+  {
+      cout<<"\nThe number is too high "<<a;
+
+  }
+} while(a!=x);
+
+cout<<"\nYou guess the number, the number is " <<x;
+cout<<"\n The guesses that you need to get the right number = "<<n;
+
+//to terminate the program:
+return 0;
+
+}
