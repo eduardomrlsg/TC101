@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+//Declaring variables:
+
+int temp, cel;
+
+//Process:
+cout<< "This program is to convert from Fahrenheit to Celsius";
+
+cout<< "\nInsert the temperature in Fahrenheit ";
+
+cin >>temp;
+
+cel= 5*(temp-32)/9;
+
+cout<<"\nThe temperature in Celsius is = "<<cel;
+
+//Terminate the program:
+
+return 0;
+
+}
