@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+
+//Declaring variables:
+float num1, num2, result, result1, result2, result3;
+
+//Process:
+cout <<"This program may help you to make basic arithmetic operation between two numbers";
+
+cout <<"\nWrite the first number = ";
+
+cin >> num1;
+
+cout <<"Write the second number = ";
+
+cin >> num2;
+
+result=num1+num2;
+
+cout<< "\nThe result of the additon = "<<result;
+
+result1= num1-num2;
+
+cout<<"\nSubtraction = "<<result1;
+
+result2= num1*num2;
+
+cout<<"\nMultiplication = "<<result2;
+
+result3= num1/num2;
+
+cout<<"\n The result of the division = "<<result3;
+
+//terminate the program:
+
+return 0;
+
+}
