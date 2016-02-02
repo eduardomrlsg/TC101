@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+  //Declaring variables:
+  float radius, height, a;
+
+  //Process:
+  cout <<"This program may help you to print the volume of a cylinder";
+
+  cout <<"\nWrite the radius__";
+
+  cin >> radius;
+
+  cout <<"Write the height__";
+
+    cin >> height;
+
+    a=(radius*radius)*(3.14)*(height);
+
+  cout<<"The volume is __"<<a;
+
+  return 0;
+}
