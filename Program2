@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+
+//Declaring variables:
+int num1, num2, result1, result2, result3;
+
+//Process:
+cout <<"This program may help you to make basic arithmetic operation between two numbers";
+
+cout <<"\nWrite the first number = ";
+
+cin >> num1;
+
+cout <<"Write the second number = ";
+
+cin >> num2;
+
+result1= num1*num2;
+
+cout<<"\nMultiplication = "<<result1;
+
+result2= num1/num2;
+
+cout<<"\n The integer division of the two numbers = "<<result2;
+
+result3=num1%num2;
+
+cout<< "\nThe remainder of the division = "<<result3;
+
+
+//terminate the program:
+
+return 0;
+
+}
