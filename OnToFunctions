@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+int subtraction(int x, int y)
+{
+  int s;
+  s=x-y;
+  return s;
+}
+
+int addition (int x, int y)
+{
+  int a;
+  a=x+y;
+  return a;
+}
+
+int multiplication (int x, int y)
+{
+  int m;
+  m=x*y;
+  return m;
+}
+
+int division (int x, int y)
+{
+  int d;
+  d=x/y;
+  return d;
+}
+
+int remainder (int x, int y)
+{
+  int r;
+  r=x%y;
+  return r;
+}
+
+int main ()
+{
+  int x, y, s, a, d, m, r;
+  cout <<"This program may help you to make basic arithmetic operation between two numbers";
+  cout <<"\nWrite the first number = ";
+  cin >> x;
+  cout <<"Write the second number = ";
+  cin >> y;
+
+  s=subtraction(x,y);
+  a=addition(x,y);
+  d=division(x,y);
+  m=multiplication(x,y);
+  r=remainder(x,y);
+
+  cout <<"\nSubtraction = "<<s;
+  cout <<"\nAddition = "<<a;
+  cout <<"\nMultiplication = "<<m;
+  cout <<"\nDivision = "<<d;
+  cout <<"\nRemainder of the division = "<<r;
+
+return 0;
+}
