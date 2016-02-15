@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int num1, result=1;
+char resp;
+
+
+  cout<<"\nThis program may calculate the factorial of one number";
+  do {
+  cout<<"\nPlease give me the number = ";
+  cin>>num1;
+
+for (int m=1; m<=num1; m++)
+{
+   result=m*result;
+}
+
+  cout<<"\nThe result of the factorial is = "<<result;
+  cout<<"\n Would you like to do it agan? Press (y) to do it and (n) to exit : ";
+  cin>>resp;
+
+   result=1;
+}while(resp=='y');
+
+ cout<<"\nThanks for using this factorial calculator!";
+  return 0;
+
+}
