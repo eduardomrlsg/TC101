@@ -1,3 +1,4 @@
+//EDMO-PROGRAMMING-FACTORIALCALCULATOR.
 #include <iostream>
 
 using namespace std;
@@ -5,14 +6,17 @@ using namespace std;
 int main()
 {
 int num1, result=1;
+//Dont forget to declare the variable with CHAR because we are using one symbol(letter).
 char resp;
 
 
   cout<<"\nThis program may calculate the factorial of one number";
+  
+  //Use the do-while for ask if the user wants to run the program again.
   do {
   cout<<"\nPlease give me the number = ";
   cin>>num1;
-
+//Loop for is to repeat the program until the conditional are wrong.
 for (int m=1; m<=num1; m++)
 {
    result=m*result;
