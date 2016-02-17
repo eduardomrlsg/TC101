@@ -1,0 +1,37 @@
+//EDMO-PROGRAMMING
+#include <iostream>
+using namespace std;
+//Here I put my function, with the two values that we are asking to the user.
+int superpower(int a, int b)
+{
+int x=1;
+
+//Use a for loop to repeat the program until the condition is true, that helps us to do the multiplication with the two numbers.
+  for(int count=1; count<=b; count++)
+    {
+
+     x=x*a;
+
+    }
+
+ return(x);
+
+}
+
+int main()
+{
+
+ int x, y, result;
+
+ cout<< "\nThis program may help you to do the next operation: (a^b)";
+ cout<< "\nGive me the number of the base = ";
+ cin>>x;
+ cout<<"\nGive me the number of the exponent = ";
+ cin>>y;
+
+result=superpower(x,y);
+
+cout<< "\nThe result is =  "<< result;
+
+return 0;
+}
