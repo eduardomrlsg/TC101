@@ -1,0 +1,46 @@
+//EDMO-PROGRAMMING-FIBONACCISEQUENCE.
+#include <iostream>
+
+using namespace std;
+
+//Using the function Fibonacci (with the numbers of therms -INT n-)
+int Fibonacci(int n)
+  {
+      if (n==1)
+      {
+        return 1;
+      }
+      if (n<=0)
+      {
+        return 0;
+      }
+      else{
+        //This else is so important, because if the value is more than 0 or 1, that makes the addition and gave us the correct number.
+        return Fibonacci(n-1)+Fibonacci(n-2);
+      }
+  }
+
+int main()
+//ASking for the number of the sequence that the user wants.
+{
+  int n, fibo;
+  char resp;
+
+  cout<<"\nThis program helps you to do the Fibonacci Sequence";
+
+  do{
+   cout << "\nEnter the therm that you want :";
+   cin >> n;
+
+   fibo=Fibonacci(n);
+
+   cout << "\nThe result is ="<<fibo ;
+   cout<< "\n Would you like to do it again? use -y-(yes) or -n-(no) :";
+   cin>>resp;
+
+ }while (resp == 'y');
+
+   cout<<"\nThanks for using this Fibonacci program, don't forget to visit my blog!";
+
+return 0;
+}
