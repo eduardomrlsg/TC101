@@ -1,0 +1,35 @@
+//EDMO-PROGRAMMING
+#include <iostream>
+using namespace std;
+
+//USE THE FUNCTION STARS TO MAKE THE PROCESS.
+int stars (int s)
+{
+   int count=0;
+   //The DO-WHILE help us to print the star until it is the same as the user value.
+   do {
+
+        cout <<"*";
+        count++;
+   } while(count!=s);
+
+   return s;
+}
+
+//In the int main we ask the variable to be used in our function.
+int main()
+{
+
+ int s;
+
+   cout<< "\nThis program may print the number of stars that you want";
+   cout<<"\nEnter the number of starst that you want : ";
+   cin >> s;
+
+//Dont forget this point below, it is important to make our program workable.
+   s=stars(s);
+
+
+  return 0;
+
+}
