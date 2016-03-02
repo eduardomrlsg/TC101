@@ -1,0 +1,70 @@
+//EDMO PROGRAMMING- WSQ10 LISTS.
+#include <iostream>
+#include <cmath>
+using std::cout;
+using std::cin;
+using std::endl;
+
+//HERE THE NEW THING ARE THE NUMBERS [] AND THE NUMNUMBERS, THAT HELPS US TO CALL FOR THE NUMBER OF VARIABLES THAT WE WANT WITHOUT REPEATING THE VARIABLE IN OUR CODE.
+float Total (float numbers [], int numNumbers)
+{
+  float t=0.0;
+  for (int i=0; i<numNumbers; i++)
+  {
+     t += numbers[i];
+  }
+  return t;
+}
+//THE FUNCTION FOR THE AVERAGE, USING NUMNUMBERS(1O VALUES THAT THE USER WILL GIVE)
+float Average (float numbers [], int numNumbers)
+{
+  float a=0.0, ave=0.0;
+  for (int i=0; i<numNumbers; i++)
+  {
+      a+=numbers[i];
+  }
+  ave=a/numNumbers;
+  return ave;
+}
+//For the standar deviation, we have to calculate the addition of the numbers and the average, then we subtract the average from the addition, and the result ^2.
+float Desviation (float numbers [], int numNumbers)
+{
+  float t=0.0, ave=0.0;
+  for (int i=0; i<numNumbers; i++)
+  {
+     t += numbers[i];
+  }
+  ave= t/numNumbers;
+
+     float desv=0.0, ds=0.0;
+     for (int i=0; i<numNumbers; i++)
+     {
+        desv=desv+pow((numbers[i]-ave),2);
+     }
+     //Also we have to calculate the Square of the divition between the result and the total of numbers that we are using.
+       ds=sqrt (desv/numNumbers);
+      return ds;
+
+}
+//Const int is used for the number of variables that never changes.
+int main ()
+{
+  const int NUM_NUMBERS=10;
+  float x[NUM_NUMBERS];
+  for (int i=0; i<NUM_NUMBERS; i=i+1)
+  float n[10];
+  cout <<"\nThis program may help you to calculate the average, the addition and the standard deviation of 10 numbers. ";
+  for (int i=0; i<10; i++)
+  {
+    cout <<"\nGive me a number : ";
+    cin>>x[i];
+  }
+  float total= Total(x,10);
+  float average=Average(x,10);
+  float stdev=Desviation(x,10);
+
+  cout<<"The total of the addition for the 10 numbers is =" << total << endl;
+  cout<<"The average is = " << average << endl;
+  cout<<"The standard deviation of the 10 numbers is = " << stdev << endl;
+
+}
