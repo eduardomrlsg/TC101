@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip> //To use the setpresicion function.
+
+using namespace std;
+
+//First, we have to get the factorial for the number
+
+int getFactorial(int x)
+{
+  if (x==0|| x==1)
+  {
+    return 1;
+  }
+  else
+  {
+    return x*getFactorial(x-1);
+  }
+}
+//THANKS TO DARIO FOR THIS PART, IT WAS THE PART WHEN I WAS LOST AND WITHOUT IDEA, THANKS BRO.
+
+double eulerCal(float precision) {
+  double e=0, previous=e;
+  int n=0;
+
+  do {
+
+   previous=e;
+   e+=1.0/getFactorial (n);
+   n++;
+
+      }while((e-previous)>precision);
+  return e;
+}
+//HERE I USE THE FUNCTION SET PRECISION TO ASK FOR THE USER FOR THE NUMBERS OF DECIMALS THAT HE WANTS.
+int main() {
+  double prec, x;
+  cout<<"Write the precision (numbers of decimals that you want)"<< endl;
+  cin>> x;
+  cout<< setprecision(x);
+  cout<<"The Euler value with precision of:"<<" "<<x<<" "<<"is: "<<" "<<eulerCal(prec)<<endl;
+  return 0;
+}
+
+
