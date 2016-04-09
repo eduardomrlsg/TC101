@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string palindrome (string a)
+{
+  if (a == string (a.rbegin(), a.rend()))
+  {
+    cout<<"Yes, you has a palyndrome"<<endl;
+
+  }
+  else
+  {
+    cout<<"No, you doesn't have a palyndrome"<<endl;
+
+  }
+}
+int main ()
+{
+  string a, s;
+  cout<<"This program will tell you if the word that you put is a palyndrome or not"<<endl;
+  cout<<"Enter your word"<<endl;
+  cin>>a;
+  s=palindrome(a);
+  cout<<s<<endl;
+}
