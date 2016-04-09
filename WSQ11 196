@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int reverse(long num){
+long numRev=0;
+long sum;
+int cont=-1;
+do{
+sum=num;
+numRev=0;
+while (num!=0){
+numRev= numRev*10+(num%10);
+num=num/10;
+
+}
+cont++;
+num=numRev+sum;
+}
+while(sum!=numRev && cont!=30);
+
+return cont;
+
+}
+int main (){
+int uBound, lBound, palandrome, vPalandrome=0, vNonLycherels=0, vLycherels=0;
+
+cout << "Give The lower bound of the sequence\n";
+cin >> lBound;
+cout << "Give The upper bound of the sequence\n";
+cin >> uBound;
+
+for(int z=lBound; z<uBound+1; z++){
+
+reverse(z);
+palandrome=reverse(z);
+if(palandrome==0){
+vPalandrome++;
+}
+else if (palandrome<30){
+vNonLycherels++;
+}
+else if (palandrome==30){
+vLycherels++;
+}
+
+}
+cout <<"Palindrome"<< vPalandrome <<endl;
+cout <<"Non-Lycherels"<< vNonLycherels <<endl;
+cout <<"Lycherels"<< vLycherels <<endl;
+return 0;
+}
