@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+double dot_product(double list[], double list1[], int n){  //HERE WE USE THE FUNCTION DOTPRODRUCT TO MAKE THE OPERATIONS BETWEEN THE TWO NUMBERS OF THE LISTS (1ST*1ST; 2ND*2ND)
+
+    double result=0;
+
+      for (int i = 0; i < n; i++)
+
+        {
+          result=result+(list[i]*list1[i]);
+        }
+
+return result;
+}
+
+int main (){
+
+  int n;
+
+    cout<<"How many numbers do you want to use?"<<endl;
+    cin>>n;
+
+    double result, list[n], list1[n];
+      for (int i = 0; i < n; i++){    //THIS FOR LOOP IS TO GET THE NUMBERS THAT WILL BE USING ON THE FIRST LIST OF THE FUNCTION
+
+          cout<<"Give me the "<<i+1<<" value of the list: ";
+          cin>>list[i];
+        }
+
+      for (int i = 0; i < n; i++){    //THIS FOR LOOP IS TO GET THE NUMBERS THAT WILL BE USING ON THE SECOND LIST OF THE FUNCTION
+
+        cout<<"Give me the "<<i+1<<" value of the second list : ";
+        cin>>list1[i];
+        }
+
+          result=dot_product(list,list1,n);
+          cout<<"The result of the dot product is : "<<result;
+
+return 0;
+
+}
