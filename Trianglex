@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int triangles(int x)
+{
+    for (int i=1;i<=x; i++)  //here with the for loop i try to make a counter of T,
+                             // and it has to count plus 1 if it is less than the number than you put,
+                             // and subtract 1 if it is more than the number that you have.
+    {
+        for(int j=1;j < i+1 ; j++ )
+            cout <<"T";
+                cout<<endl;
+    }
+    for (int i=x-1; i>=1; i--)
+    {
+      for(int j=1;j < i+1 ; j++ )
+          cout <<"T";
+              cout<<endl;
+    }
+}
+
+int main()
+{
+  int y;
+  cout << "Select the number of the largest part of the triangle" <<endl;
+  cin >> y;
+  triangles(y);
+}
