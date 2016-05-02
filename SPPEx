@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+long superpower (long a, long b){
+
+  long x=1;
+
+    for (long count =1; count <=b; count ++){
+        x=x*a;
+        }
+            return x;
+  }
+
+int main (){
+
+  long a, b, r;
+
+    cout <<"This program will make the operation a up to b"<<endl;
+    cout <<"Put the number of the a"<<endl;
+    cin >>a;
+    cout <<"Enter the number of b"<<endl;
+    cin >> b;
+
+      r= superpower(a,b);
+
+        cout <<"The result is = "<<r<<endl;
+
+
+        return 0;
+}
