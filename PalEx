@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+string case_check(string z)//With this function we can transform capital letters to lowercase, so you can check if the word is a palindrom even if it's written in disorder.
+{
+  for(int i=0;i<z.size();i++)
+  {
+    if(z[i]>64 && z[i]<91) z[i]+=32;
+  }
+  return z;
+}
+
+bool isPalindrome(string z)
+{
+  string w,pal;
+  w=case_check(z);
+  pal=string(w.rbegin(),w.rend());
+  if(w==pal) return true;
+  else return false;
+}
+
+int main()
+{
+  string p;
+  bool resp;
+  cout<<"Tell me the word and i'll tell you if it is a palindrome or not " << endl;
+  getline(cin,p);
+  resp=isPalindrome(p);
+  if(resp) cout<<"TRUE"<<endl;
+  else cout<<"FALSE"<<endl;
+}
+
+//FAlSO 0, CUALQUIER VALOR DIFERENTE DE 0 ES VERDAD.
